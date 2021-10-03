@@ -3,53 +3,41 @@
             <h3>Section 2</h3>
             <div class="timeline">
                 <div class="cont">
-                  <div class="container">
-                      <div class="row">
-                          <div style="display: flex;">
-                            <a id="anc-1" href="">1789</a>
+                  <div id="section1" class="container">
+                          <div class="date" style="display: flex">
+                            <a id="anc-1" class="anc" href="">1789</a>
                             <span id="arrow1">&#8594;</span>
-                          </div>
-                      </div>
-                      <div class="row">
-                        <article id="article-1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            <article id="article-1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                            when an unknown printer took a galley of type and scrambled it to make a type 
-                            specimen book. It has survived not only five centuries, 
+                            when an unknown printer.
                             but also the leap into electronic typesetting, remaining essentially unchanged.
                          </article>
-                      </div>
+                          </div>
                   </div>
                 </div>
                 <div class="cont">
-                    <div class="container">
-                        <div class="row">
-                            <div style="display: flex;">
-                                <a id="anc-2" href="">1820</a>
+                    <div id="section2" class="container">
+                            <div class="date" style="display: flex">
+                                <a id="anc-2" class="anc" href="">1820</a>
                                 <span id="arrow2">&#8594;</span>
-                              </div>
-                        </div>
-                        <div class="row">
-                          <article id="article-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                <article id="article-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                               when an unknown printer took a galley of type and scrambled it to make a type 
-                              specimen book. It has survived not only five centuries, 
-                              but also the leap into electronic typesetting, remaining essentially unchanged.
                            </article>
-                        </div>
+                              </div>
                     </div>
                 </div>
                 <div class="cont">
                     <div class="container">
-                        <div class="row">
-                            <div style="display: flex;">
-                                <a id="anc-3" href="">1860</a>
+                            <div class="date" style="display: flex">
+                                <a id="anc-3" class="anc" href="">1860</a>
                                 <span id="arrow3">&#8594;</span>
-                              </div>
-                        </div>
-                        <div class="row">
-                          <article id="article-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                              <article id="article-3">
+                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                               when an unknown printer took a galley of type and scrambled it to make a type 
+                              specimen book. It has survived not only five centuries, 
+                              but also the leap into electronic typesetting, remaining essentially unchanged.
                               specimen book. It has survived not only five centuries, 
                               but also the leap into electronic typesetting, remaining essentially unchanged.
                            </article>
@@ -58,21 +46,15 @@
                   </div>
                 <div class="cont">
                     <div class="container">
-                        <div class="row">
-                            <div style="display: flex;">
-                                <a id="anc-4" href="">1910</a>
+                            <div class="date" style="display: flex">
+                                <a id="anc-4" class="anc" href="">1910</a>
                                 <span id="arrow4">&#8594;</span>
+                                 <article id="article-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                              when an unknown printer took a galley of type and scrambled it to make a type 
+                           </article>
                             </div>
                         </div>
-                        <div class="row">
-                          <article id="article-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                              when an unknown printer took a galley of type and scrambled it to make a type 
-                              specimen book. It has survived not only five centuries, 
-                              but also the leap into electronic typesetting, remaining essentially unchanged.
-                           </article>
-                        </div>
-                    </div>
                 </div>
               </div>
               <hr>
@@ -101,7 +83,6 @@
     color: rgb(24, 24, 153);
     font-size: 30px;
 }
-
 
 
 /* The actual timeline (the vertical ruler) */
@@ -194,8 +175,7 @@
     }
   }
   
-
-#article-1 {
+ #article-1 {
     display: none;
 }
 #article-2 {
@@ -207,7 +187,7 @@
 #article-4 {
     display: none;
 }
-
+ 
 #anc-1 {
     color: rgb(18, 18, 119);
     font-weight: 600;
@@ -233,8 +213,8 @@
 }
 
 .date {
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 15px;
+    color: black;
 }
 
 #arrow1 {

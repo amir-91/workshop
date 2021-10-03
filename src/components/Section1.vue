@@ -85,14 +85,15 @@ tr, td {
 }
 
 
-
+@media(max-width: 1180px) {
+     .titleB {
+       display: block;
+   }
+}
 
 @media(max-width: 735px) {
    .col img {
        width: 350px;
-   }
-   .titleB {
-       text-align: center;
    }
 }
 </style>

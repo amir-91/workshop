@@ -9,69 +9,34 @@ new Vue({
 
 /* handling timeline anchors */
 
-const anc1 = document.getElementById('anc-1')
-const anc2 = document.getElementById('anc-2')
-const anc3 = document.getElementById('anc-3')
-const anc4 = document.getElementById('anc-4')
+const date = document.getElementsByClassName('date')
+const anc = document.querySelectorAll('.anc')
 
-const anc = document.querySelectorAll('a')
-const article = document.querySelectorAll('article')
-const arrow = document.querySelectorAll('span')
-
-const toggleDate = (date) => {
-  date.preventDefault()
-  const id = date.target.id.substring(date.target.id.indexOf('-') + 1)
-  const selectedArticle = [...article].filter((el) => el.id === `article-${id}`)
-  const selectedAnchor = [...anc].filter((el) => el.id === `anc-${id}`)
-  const selectedArrow = [...arrow].filter((el) => el.id === `arrow${id}`)
-
-  anc.forEach((el) => {
-    if(el.id === date.target.id) {
-        selectedArticle[0].style.display = 'block'
-        selectedAnchor[0].classList.add('date')
-        selectedArrow[0].style.display = 'none'
-        el.style.fontSize = '40px'
-      } else {
-        const unselectedArt = [...article].filter((el) => el.id !== `article-${id}`)
-        const unselectedAnchor = [...anc].filter((el) => el.id !== `anc-${id}`)
-        const unselectedArrow = [...arrow].filter((el) => el.id !== `arrow${id}`)
-        unselectedArt.map((el) => {
-          el.style.display = 'none'
-        })
-        unselectedAnchor.map((el) => {
-         el.classList.remove('date')
-         el.style.fontSize = '20px'
-        })
-        unselectedArrow.map((el) => {
-          el.style.display = 'block'
-          el.style.display = 'block'
-          el.style.display = 'block'
-        })
-
-      }
+ anc.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    e.preventDefault()
+    if(e.target.id === item.id) {
+      item.style.fontSize = '40px'
+      item.style.color = 'rgb(24, 24, 153)'
+    }
+    const data = [...anc].filter((el) => el !== item)
+    data.forEach((el) => {
+       el.style.fontSize = '20px'
     })
-} 
-
-
-anc1.addEventListener('click', (e) => {
-  //e.preventDefault()
-  toggleDate(e)
-})
-
-anc2.addEventListener('click', (e) => {
-  //e.preventDefault()
-  toggleDate(e)   
-})
-
-anc3.addEventListener('click', (e) => {
-  //e.preventDefault()
-  toggleDate(e) 
-})
-
-anc4.addEventListener('click', (e) => {
-    //e.preventDefault()
-    toggleDate(e)   
-})
+     date.forEach((el) => {
+       if(el.children[0] === item) {
+         el.children[1].style.display = 'none'
+         el.children[2].style.display = 'block'
+         el.style.flexDirection = 'column'
+       }
+       else {
+        el.children[1].style.display = 'block'
+        el.children[2].style.display = 'none'
+        el.style.flexDirection = 'row'
+       }
+     })
+  })
+}) 
 
 
 const sections = document.querySelectorAll("section")
